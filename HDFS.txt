@@ -1,0 +1,11 @@
+cd
+start-all.sh
+hdfs dfs -mkdir /user/bigdata/projects/
+hadoop fs -touch /user/bigdata/projects/customers_segmentation2.csv
+hadoop fs -cat /user/bigdata/projects/customers_segmentation2.csv
+hadoop fs -ls /user/bigdata/projects/
+hadoop fs -ls /user/bigdata/
+hadoop fs -ls /user
+hadoop fs -ls /projects/
+hdfs dfs -ls
+hdfs dfs -cat /user/bigdata/projects/customers_segmentation2.csv | head -n 5

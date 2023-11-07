@@ -1,0 +1,11 @@
+hive
+hadoop fs -ls /user/hive/
+create external table customers(id int, gender varchar(5),ever_married varchar(8),age string, 
+graduated boolean,work_experience int,spending_score varchar(10),family_size int,var_1 text,segmentation varchar(4))
+    row format delimited fields terminated by ',' stored as textfile location'/home/bigdata/customers';
+ 
+hadoop fs -copyFromLocal /user/bigdata/projects/train.csv /user/hive
+SELECT * FROM customers;
+show databases;
+show tables;
+use default;
